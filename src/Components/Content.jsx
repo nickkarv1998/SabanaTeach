@@ -1,18 +1,23 @@
 import React from 'react'
+import BarraLatera from './BarraLatera'
+import Central from './Central'
+
+import Menu from './Menu'
+
 
  const Content = () => {
     return (
         <div className="principal">
             <div className="left">
-                <div className="menu">
-                &nbsp;
-                </div>
+                
+                <Menu />
             </div>
             <div className="center">
-                &nbsp;
+             <Central/>
             </div>
             <div className="right">
-                 &nbsp;
+                <BarraLatera/>
+                 
             </div>
         </div>
     )
