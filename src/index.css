@@ -1,95 +1,86 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.principal{
-  position:absolute;
-  top: 0px;
-  left:0px;
-  bottom:0px;
-  right:0px;
-  height:100%;
-  width:100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #BEB7DF;
-  
-}
-.left{
-  background:  #BEB7DF;
-  width: 10%;
-  height: 90%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  
-
-}
-.center{
-  background: #fdf2f2;
-  width: 65%;
-  height: 90%;
-  text-align: center;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px  0  0 30px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-.right{
-  background:  #5840BB;
-  width: 23%;
-  height: 90%;
-  text-align: center;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  border-radius: 0 30px  30px  0;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
+.principal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #BEB7DF;
 }
 
-.menu{
-
-  background: #5840BB;
-  width: 92%;
-  height: 95%;
-  text-align: center;
-  display:table-column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px 30px  30px  30px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+.left {
+    background: #BEB7DF;
+    width: 10%;
+    height: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.center {
+    background: #fdf2f2;
+    width: 65%;
+    height: 90%;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px 0 0 30px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
 
+.right {
+    background: #5840BB;
+    width: 23%;
+    height: 90%;
+    text-align: center;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
-.logo{
-  position:relative;
-  text-align: center;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  left: 18px;
-  color: rgb(255, 255, 255);
-  font-size: 12px;
-  
-  }
+.menu {
+    background: #5840BB;
+    width: 92%;
+    height: 95%;
+    text-align: center;
+    display: table-column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
 
-  .imag{
+.logo {
+    position: relative;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    left: 18px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.imag {
     position: relative;
     left: -45px;
     top: 30px;
@@ -97,60 +88,148 @@ code {
     height: 50px;
     float: left;
     margin-right: 15px;
-    border-radius: 5px 5px  5px  5px;
-  }
+    border-radius: 5px 5px 5px 5px;
+}
 
- .barra{
-   position: relative;
-  height: 15%;
-  width: 90%;
-  top: 25px;
- }
-  .busqueda{
+.barra {
+    position: relative;
+    height: 30px;
+    width: 90%;
+    top: 25px;
+    padding-bottom: 50px;
+}
+
+.barra form{
+    position: relative;
+    width: 90%;
+}
+
+.barra input{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.busqueda {
     border-color: rgba(255, 255, 255, 0.212);
     position: relative;
-    top:20%;
-    left: -70px;
+    top: 20%;
     width: 70%;
     height: 20px;
     border-radius: 7px;
     background-color: #d4cef1;
-  }
+}
 
-  .videoInit{
-    position: absolute;
-    top:20%;
-    left: 14%;
+.videoInit {
+    position: relative;
     border-radius: 10px;
     width: 400px;
     height: 250px;
+    float: left;
+}
 
-  }
- 
-  .ilustracion{
+.ilustracion {
     position: relative;
     top: 20px;
     width: 200px;
     height: 200px;
-        float: left;
-  }
+    float: left;
+    padding-bottom: 50px;
+}
 
-  .navbar{
+.navbar {
     position: relative;
     top: 20%;
-  }
+}
 
-
-  .menu h3{
+.menu h3 {
     position: relative;
     top: 20%;
     color: rgb(255, 255, 255);
-  }
+}
 
-  .menu h3:hover{
+.menu h3:hover {
     background-color: #fdf2f2;
-    width: 90%;
+    transform: scale(1.1);
     border-radius: 10px 0 0 10px;
     color: rgb(214, 122, 18);
-    float: right;
-  }
+}
+
+.CourseContent{
+    position: relative;
+    padding-left: 50px;
+    height: 90%;
+    width: 90%;
+    display: block;
+}
+
+.CourseContent .Title{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    float: left;
+    padding-bottom: 30px;
+}
+
+.CourseContent .Title h1{
+    position: relative;
+    float: left;
+}
+
+.CourseContent .VideoContainer{
+    position: relative;
+    height: auto;
+    width: 50%;
+    float: left;
+    display: inline;
+}
+
+.CourseContent .CourseBasicInfo{
+    position: relative;
+    padding-left: 10px;
+    height: auto;
+    width: auto;
+}
+
+.CourseContent .CourseBasicInfo h4{
+    padding-left: 20px;
+    position: relative;
+}
+
+.CourseDescription{
+    position: relative;
+    padding-top: 30px;
+    width: 100%;
+    text-align: justify;
+}
+
+.BarraLatera{
+    position: relative;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.BarraLatera .title{
+    position: relative;
+}
+
+.BarraLatera h1{
+    margin-top: 120%;
+    position: relative;
+    color: white;
+    font-size: 25px;
+    color: rgb(214, 122, 18);
+}
+
+.BarraLatera h2{
+    color: white;
+}
+
+.BarraLatera .selected{
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    color: rgb(214, 122, 18);
+}

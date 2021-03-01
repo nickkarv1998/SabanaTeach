@@ -1,14 +1,14 @@
 import React from 'react'
 import BarraBusqueda from './BarraBusqueda'
-import Video from './Video'
+import CourseContent from './courseContent'
 
 
 const Central = () => {
     return (
-        <div>
-            <BarraBusqueda/>
-            <Video />
-        </div>
+        [
+            <BarraBusqueda/>,
+            <CourseContent name="Introduccion a la Tecnología"/>
+        ]
     )
 }
 

@@ -9,7 +9,6 @@ import Menu from './Menu'
     return (
         <div className="principal">
             <div className="left">
-                
                 <Menu />
             </div>
             <div className="center">
@@ -17,11 +16,9 @@ import Menu from './Menu'
             </div>
             <div className="right">
                 <BarraLatera/>
-                 
             </div>
         </div>
     )
 }
 
 export default Content
-
