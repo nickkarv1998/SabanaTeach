@@ -1,0 +1,24 @@
+.singupcentral{
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+.campo1{
+    left: 50px;
+    width: 45%;
+    height: 35px;
+    display: block;
+    position: relative;
+    margin: 50px;
+    background-color: rgba(218, 215, 218, 0.719);
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    text-indent: 10px;
+    color: rgb(110, 109, 109);
+    
+    
+
+}

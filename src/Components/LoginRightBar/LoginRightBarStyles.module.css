@@ -1,0 +1,59 @@
+
+.RightBarContent{
+    position: relative;
+    top: 1%;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.RightBarContent--title{
+    position: relative;
+}
+
+.RightBarContent--h1{
+    margin-top: 100%;
+    position: relative;
+    color: white;
+    font-size: 35px;
+    left: 0;
+}
+
+.RightBarContent--h4{
+    position: relative;
+    color: white;
+    left: 0;
+    font-weight: 200;
+}
+
+
+
+.RightBarContent_selected{
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    color: #32C1E0;
+}
+
+.RightBarContent1{
+    top: -100px;
+}
+
+.singup{
+    position: relative;
+    top: 30px;
+    width: 80%;
+    border-radius: 50px;
+    border-style: solid;
+    height: 40px;
+    font-size: 20px;
+    background-color: #A986E2;
+    border-color: white;
+    color: white;
+    
+}
+
+.singup:hover{
+    background-color: #b69be0a2;
+    cursor: pointer;
+
+}

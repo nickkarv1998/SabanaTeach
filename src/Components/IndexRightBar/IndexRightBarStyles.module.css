@@ -1,0 +1,78 @@
+
+.RightBarContent{
+    position: relative;
+    top: 1%;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+
+
+.RightBarContent1{
+    top: -100px;
+}
+
+.singup:hover{
+    background-color: #9265da;
+    cursor: pointer;
+}
+
+.image1{
+    position: relative;
+    top:6px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;    
+}
+
+.circulo {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #ecf0ec;
+    top: 70px;
+    left: 57px;
+}
+.RightBarContent--h4{
+    position: relative;
+    color: white;
+    left: 0;
+    font-weight: 200;
+    top:20px;
+
+}
+
+
+
+
+
+.circulo1 {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #ecf0ec;
+    top: 65px;
+    left: 57px;
+}
+.image2{
+    position: relative;
+    top:0px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;    
+}
+.RightBarContent1--h4{
+    position: relative;
+    color: white;
+    left: 0;
+    font-weight: 200;
+    top:20px;
+
+}

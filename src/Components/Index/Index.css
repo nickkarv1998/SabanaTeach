@@ -1,0 +1,39 @@
+.ilustracion{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 450px;
+    top:240px;
+}
+
+.title{
+    width: 55%;
+    top: 150px;
+    position: absolute;
+    left: -180px;
+}
+
+.title h1{
+    text-align: left;
+    color: black;
+    font-size: 30px;
+}
+
+.button1{
+    position:absolute;
+    top:250px;
+    left: 390px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background: #32C1E0;
+    border-color: #32C1E0;
+    color: white;
+    font-weight: 700;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.button:hover{
+    background: #32c0e0a1;
+}

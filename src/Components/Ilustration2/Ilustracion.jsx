@@ -1,4 +1,5 @@
 import React from 'react'
+import './IlustrationStyle.css';
 
 export const Ilustracion = ({urlImg}) => {
     return (

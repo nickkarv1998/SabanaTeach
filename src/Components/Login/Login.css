@@ -1,0 +1,61 @@
+
+h1{
+    position: absolute;
+    left: 330px;
+    font-size: 70px;
+    z-index: 100;
+    color:#32C1E0 ;
+}
+.login{
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 250px;
+}
+
+
+.campo{
+    left: 200px;
+    width: 45%;
+    height: 35px;
+    display: block;
+    position: relative;
+    margin: 50px;
+    background-color: rgba(218, 215, 218, 0.719);
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    text-indent: 10px;
+    color: rgb(110, 109, 109);
+    
+    
+
+}
+.image{
+    top: 100px;
+    left: 350px;;
+    position: absolute;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    opacity: 50%;
+}
+
+.button{
+    position:absolute;
+    top:520px;
+    left: 450px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: solid;
+    background: #32C1E0;
+    border-color: #32C1E0;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.button:hover{
+    background: #32c0e0a1;
+}

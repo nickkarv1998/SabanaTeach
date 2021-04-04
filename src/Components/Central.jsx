@@ -1,12 +1,12 @@
 import React from 'react'
-import BarraBusqueda from './BarraBusqueda'
+import SearchBar from './SearchBar/SearchBar'
 import CourseContent from './courseContent'
 
 
 const Central = () => {
     return (
         [
-            <BarraBusqueda/>,
+            <SearchBar/>,
             <CourseContent name="Introduccion a la Tecnología"/>
         ]
     )

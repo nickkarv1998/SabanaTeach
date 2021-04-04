@@ -1,0 +1,81 @@
+.cursos{
+    position: relative;
+    width: 70%;
+    top: 50px;
+    left: 50px;
+}
+
+.resume{
+    background-color: #32c0e081;
+    height: 40px;
+    border-radius: 8px;
+    text-indent: -200px;
+    justify-content:center;
+    vertical-align:middle;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px rgb(158, 154, 154);
+    font-size: 18px;
+    color:rgb(68, 67, 63) ;
+    display: grid;
+    align-items: center;
+    content: "+";
+}
+
+::marker{
+    color: rgb(139, 138, 134);
+}
+
+details[open] > summary {
+    background-color: #ccf;
+  } 
+
+
+
+
+.content{
+    background-color: white;
+    padding: 10px;
+}
+
+.curso{
+    position: relative;
+    top: 100px;
+    overflow: auto;
+    height: 410px;
+    border-color: rgb(71, 11, 71);
+}
+
+.curso::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.curso::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.curso::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.curso::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.curso::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.curso::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.titulo2{
+    font-size: 30px;
+    left: 200px;
+    top: 120px;
+    color: black;
+    font-weight: 500;
+}

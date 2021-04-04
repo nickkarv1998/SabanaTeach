@@ -1,9 +1,12 @@
 import React from 'react'
-import { Logo } from './Logo'
-import MenuButton from './MenuButton'
+import { Logo } from '../Logo'
+import MenuButton from '../MenuButton'
+import './MenuStyle.css'
 
 const Menu = ({ urlImg }) => {
+   
     return (
+        
         <div className="menu">
             <div className="logo">
                 <Logo
@@ -11,7 +14,7 @@ const Menu = ({ urlImg }) => {
                 />
                 <aside>SabanaTeach</aside>
             </div>
-            <nav class="navbar">
+            <nav className="navbar">
                 <MenuButton name="Perfil" link="#primeras"/>
                 <MenuButton name="Cursos" link="#segundo"/>
                 <MenuButton name="Opciones" link="#tercero"/>
@@ -19,6 +22,8 @@ const Menu = ({ urlImg }) => {
             </nav>
         </div>
     )
+   
+    
 }
 
 export default Menu
