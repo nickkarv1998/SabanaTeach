@@ -1,10 +1,13 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import Video from './Video'
 import CourseBasicInfo from './CourseBasicInfo/CourseBasicInfo'
 import '../index.css'
 
 
 const CourseContent = (props) => {
+
+    
+
     return (
         <div className="CourseContent">
             <div className="Title1">

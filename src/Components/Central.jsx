@@ -1,9 +1,13 @@
-import React from 'react'
+import React  , {useEffect}  from 'react'
 import SearchBar from './SearchBar/SearchBar'
 import CourseContent from './courseContent'
 
 
-const Central = () => {
+const Central = ({setShowMenu}) => {
+    useEffect(() => {
+        setShowMenu(true)
+        
+      }, [])
     return (
         [
             <SearchBar/>,
