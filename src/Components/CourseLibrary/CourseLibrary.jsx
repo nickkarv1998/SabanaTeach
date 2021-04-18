@@ -1,13 +1,14 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import './CourseLibrary.css'
 
-const CourseLibrary = () => {
+const CourseLibrary = ({setShowMenu}) => {
 
     const [staticPosts, setStaticPosts] =React.useState([])
 
-    React.useEffect(() => {
+    useEffect(() => {
       obtenerDatos()
+      setShowMenu(true)
       
     }, [])
   
