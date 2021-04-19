@@ -1,16 +1,16 @@
 import React from 'react'
 import './courseStatusCard.css'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
-const CourseStatusCard = ({props}) => {
-    console.log(props)
-    console.log(props.name)
-    console.log(props.class)
 
+const CourseStatusCard = ({ props }) => {
     return (
-        <li class="item">
-            <p>{props.name}</p>
-            <p>{props.class}</p>
-        </li>
+        <Link to={"/CourseContent"} style={{ textDecoration: 'none' }}>
+            <li class="item">
+                <h2>{props.name}</h2>
+                <p>{props.class}</p>
+            </li>
+        </Link>
     )
 }
 
