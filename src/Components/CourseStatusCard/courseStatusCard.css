@@ -1,0 +1,18 @@
+h1 {
+  font-size: 5;
+}
+
+h2 {
+  text-decoration: none;
+}
+
+.hs>li, .item {
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #BEB7DF;
+  border-radius: 8px;
+  text-decoration: none;
+}

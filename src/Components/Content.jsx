@@ -13,6 +13,7 @@ import IndexRightBar from './IndexRightBar/IndexRightBar';
 import SingUp from './SignUp/SignUp';
 import Home from './Home/Home';
 import Homerb from './HomeRightBar/HomeRightBar';
+import Class from './Class/Class'
 
 
 
@@ -71,12 +72,21 @@ const Content = ({ showMenu, setShowMenu }) => {
                     />
                     <Route path="/Home" exact render={() =>
                         < Home 
-                        setShowMenu={setShowMenu}/>}
+                         setShowMenu={setShowMenu}
+                        />}
                     />
-                    
+                    <Route path="/Class" exact render={() =>
+                        < Class 
+                         setShowMenu={setShowMenu}
+                        />}
+                    />
                 </div>
                 <div className="right">
                     <Route path="/CourseContent" exact render={() =>
+                        <RightBar 
+                        />}
+                    />
+                    <Route path="/Class" exact render={() =>
                         <RightBar 
                         />}
                     />
@@ -89,12 +99,9 @@ const Content = ({ showMenu, setShowMenu }) => {
                     />
 
                     <Route path="/Home" exact render={() =>
-                        < Homerb 
+                        < Homerb
                         setShowMenu={setShowMenu}/>}
                     />
-
-
-
 
                 </div>
 

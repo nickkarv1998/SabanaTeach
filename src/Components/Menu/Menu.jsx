@@ -15,8 +15,8 @@ const Menu = ({ urlImg }) => {
                 <aside>SabanaTeach</aside>
             </div>
             <nav className="navbar">
-                <MenuButton name="Perfil" link="#primeras"/>
-                <MenuButton name="Cursos" link="#segundo"/>
+                <MenuButton name="Perfil" link="/home"/>
+                <MenuButton name="Cursos" link="/courselibrary"/>
                 <MenuButton name="Opciones" link="#tercero"/>
                 <MenuButton name="About Us" link="#cuarto"/>
             </nav>
