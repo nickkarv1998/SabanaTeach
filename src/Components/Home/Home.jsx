@@ -1,18 +1,36 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Component} from 'react'
 import SearchBar from '../SearchBar/SearchBar'
+import CourseStatusCard from '../CourseStatusCard/courseStatusCard.jsx'
 import './Home.css'
+
 import News from './NW.jpg';
 
 
-const Home = ({ setShowMenu }) => {
+import axios from '../../Instances/axiosInstance.js'
 
-    useEffect(() => {
-        setShowMenu(true)
+class Home extends Component {
 
-    }, [])
+    constructor(props) {
+        super()
+        props.setShowMenu(true)
+    }
 
-    return (
-        <div >
+    state = {
+        courses: []
+    }
+
+    componentDidMount() {
+        axios.get('current.JSON')
+            .then(response => {
+                const loadedCourses = response.data;
+                console.log(loadedCourses)
+                this.setState({courses: loadedCourses})
+            })
+    }
+
+    render() {
+        return (
+            <div >
             <div>
                 <SearchBar />
 
@@ -47,6 +65,10 @@ const Home = ({ setShowMenu }) => {
 
         </div>
     )
+
+        )
+    }
+
 }
 
 export default Home
