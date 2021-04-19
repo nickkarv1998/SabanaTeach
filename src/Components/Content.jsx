@@ -71,9 +71,9 @@ const Content = ({ showMenu, setShowMenu }) => {
                     />
                     <Route path="/Home" exact render={() =>
                         < Home 
-                        setShowMenu={setShowMenu}/>}
+                        // setShowMenu={setShowMenu}
+                        />}
                     />
-                    
                 </div>
                 <div className="right">
                     <Route path="/CourseContent" exact render={() =>
@@ -92,9 +92,6 @@ const Content = ({ showMenu, setShowMenu }) => {
                         < Homerb 
                         setShowMenu={setShowMenu}/>}
                     />
-
-
-
 
                 </div>
 

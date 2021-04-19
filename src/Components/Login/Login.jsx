@@ -14,7 +14,7 @@ const Login = () => {
                 <input type="password" name="name" className="campo" placeholder="Password" />
                 
             </form>
-            <Link to={"/CourseContent"}>
+            <Link to={"/Home"}>
            <button className="button" >Iniciar Sesión</button>
            </Link>
 
