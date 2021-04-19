@@ -51,21 +51,62 @@
     align-items: center;
     background: #BEB7DF;
     border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+  }
+
+  .item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
   .card{
     background-color: rgba(165, 135, 192, 0.61);
     top: 50px;
-    padding: 10px;
+    padding: 0px;
     margin: 15px;
     position: relative;
     width: 500px;
     height: 200px;
     border-radius: 10px 10px 0px 0px;
     font-size: 13px;
-  }
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
 
   .news{
     display: flex;
     width: 100%;
+  }
+
+
+  .new{
+    /* overflow: visible; */
+    width: 100%;
+    height: 200px;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+  }
+   .par{
+     float: rigth;
+     display: flexbox;
+     justify-content: center;
+     align-content: center;
+     flex-direction: column;
+
+     top:-100px
+   }
+
+   .bar{
+     background-color: rgba(255, 255, 255, 0.767);
+     height: 50%;
+     position: relative;
+     bottom: 100px;
+     display: none;
+   }
+
+  
+  
+  .card:hover > #bar{
+    display: block;
   }
