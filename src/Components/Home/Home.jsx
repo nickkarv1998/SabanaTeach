@@ -1,4 +1,4 @@
-import React, { useEffect, Component} from 'react'
+import React, { Component} from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import CourseStatusCard from '../CourseStatusCard/courseStatusCard.jsx'
 import './Home.css'
@@ -16,11 +16,12 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('current.JSON')
+        const userId = localStorage.getItem("userId")
+        axios.get(`/courses/user/${userId}`)
             .then(response => {
-                const loadedCourses = response.data;
-                console.log(loadedCourses)
-                this.setState({courses: loadedCourses})
+                const stateCopy = {...this.state}
+                stateCopy.courses = response.data;
+                this.setState(stateCopy)
             })
     }
 
@@ -33,8 +34,9 @@ class Home extends Component {
                     <h2 className="title4">Mis Cursos</h2>
 
                     <ul class="hs">
-                        {this.state.courses.map(it =>
-                        <CourseStatusCard props = {it}/>)}
+                        {
+                            this.state.courses.map(course => <CourseStatusCard course={course}/>)
+                        }
                     </ul>
                 </div>
 

@@ -1,7 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Ilustracion } from '../Ilustration/Ilustracion'
-import Index from '../Index/Index';
 import SectionClass from '../SectionClass/SectionClass'
 import styles from './RightBarStyles.module.css';
 
