@@ -1,0 +1,30 @@
+
+.RightBarContent{
+    position: relative;
+    top: 1%;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.RightBarContent .title{
+    position: relative;
+}
+
+.RightBarContent h1{
+    margin-top: 120%;
+    position: relative;
+    color: white;
+    font-size: 25px;
+    color: #32C1E0;
+}
+
+.RightBarContent h2{
+    color: white;
+}
+
+.RightBarContent .selected{
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    color: #32C1E0;
+}

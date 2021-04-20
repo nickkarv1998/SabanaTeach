@@ -1,0 +1,88 @@
+.singupcentral{
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+.campo1{
+    left: 35px;
+    width: 70%;
+    height: 35px;
+    display: block;
+    position: relative;
+    margin: 50px;
+    background-color: rgba(218, 215, 218, 0.719);
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    text-indent: 10px;
+    color: rgb(110, 109, 109);
+    top:-40px;
+    
+    
+
+}
+
+.campo2{
+    left: 10px;
+    width: 70%;
+    height: 35px;
+    display: block;
+    position: relative;
+    margin: 50px;
+    background-color: rgba(218, 215, 218, 0.719);
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    text-indent: 10px;
+    color: rgb(110, 109, 109);
+    top:-40px;
+    
+    
+
+}
+
+.cont{
+    position: relative;
+    display: flex;
+    margin-top: -100px;
+}
+
+.title3{
+    position: relative;
+    left: 0px;
+    color: rgb(87, 80, 80);
+}
+
+.label{
+  position: relative;
+  margin-bottom: 0px;
+  left: -100px;
+}
+
+.label1{
+  position: relative;
+  margin-bottom: 0px;
+  left: -115px;
+}
+
+.singup{
+    position: relative;
+    top: 70px;
+    width: 20%;
+    border-radius: 50px;
+    border-style: solid;
+    height: 40px;
+    font-size: 20px;
+    background-color: #A986E2;
+    border-color: white;
+    color: white;
+    
+}
+
+.singup:hover{
+    background-color: #b69be0a2;
+    cursor: pointer;
+
+}

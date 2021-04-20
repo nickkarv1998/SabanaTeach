@@ -1,0 +1,35 @@
+.navbar {
+    position: relative;
+    top: 20%;
+    text-decoration: none;
+
+}
+
+.menu h3 {
+    position: relative;
+    top: 20%;
+    color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration: wavy;
+}
+
+.menu h3:hover {
+    background-color: #fdf2f2;
+    transform: scale(1.1);
+    border-radius: 10px 0 0 10px;
+    color: #32C1E0;
+    text-decoration: none;
+
+}
+
+.logo {
+    position: relative;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    left: 18px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+

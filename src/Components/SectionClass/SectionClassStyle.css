@@ -1,0 +1,13 @@
+.SectionClass h2{
+    color: white;
+}
+
+.SectionClass .selected{
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    color: #32C1E0;
+}
+
+.SectionClass{
+    font-size: 10px;
+}
