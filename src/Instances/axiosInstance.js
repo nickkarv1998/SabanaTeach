@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const instance = axios.create({
-    baseURL: "http://localhost:3000/DB"
+const axiosInstance = axios.create({
+    baseURL: "https://sabana-teach-rest.herokuapp.com/"
 });
 
-export default instance;
+export default axiosInstance;
