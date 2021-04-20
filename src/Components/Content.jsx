@@ -80,12 +80,13 @@ const Content = ({showMenu, setShowMenu}) => {
                             setShowMenu={setShowMenu}
                         />}
                     />
-                </div>
-                <div className="right">
                     <Route path="/CourseContent/:courseId" exact render={
                         (routeParams) => <CourseContent courseId={routeParams.match.params.courseId}/>
                     }
                     />
+                </div>
+                <div className="right">
+
                     <Route path="/Class" exact render={() =>
                         <RightBar
                         />}

@@ -69,8 +69,6 @@ code {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .imag {
     position: relative;
     left: -45px;
@@ -82,7 +80,6 @@ code {
     border-radius: 5px 5px 5px 5px;
 }
 
-
 .videoInit {
     position: relative;
     top:10px;
@@ -92,10 +89,6 @@ code {
     float: left;
 }
 
-
-
-
-
 .CourseContent{
     position: relative;
     padding-left: 50px;
@@ -103,7 +96,6 @@ code {
     width: 90%;
     display: block;
 }
-
 
 .CourseContent .VideoContainer{
     position: relative;
