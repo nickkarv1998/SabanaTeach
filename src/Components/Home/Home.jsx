@@ -1,6 +1,6 @@
-import React, { Component} from 'react'
-import SearchBar from '../../Components/SearchBar/SearchBar'
-import CourseStatusCard from '../../Components/CourseStatusCard/courseStatusCard.jsx'
+import React, { useEffect, Component} from 'react'
+import SearchBar from '../SearchBar/SearchBar'
+import CourseStatusCard from '../CourseStatusCard/courseStatusCard.jsx'
 import './Home.css'
 import axios from '../../Instances/axiosInstance.js'
 
