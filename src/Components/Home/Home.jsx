@@ -2,6 +2,10 @@ import React, { Component} from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import CourseStatusCard from '../CourseStatusCard/courseStatusCard.jsx'
 import './Home.css'
+
+import News from './NW.jpg';
+
+
 import axios from '../../Instances/axiosInstance.js'
 
 class Home extends Component {
@@ -51,6 +55,7 @@ class Home extends Component {
                     </div>
 
                 </div>
+
             </div>
         )
     }
