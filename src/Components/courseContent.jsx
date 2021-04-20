@@ -6,8 +6,6 @@ import '../index.css'
 
 const CourseContent = (props) => {
 
-    
-
     return (
         <div className="CourseContent">
             <div className="Title1">
