@@ -1,5 +1,5 @@
 import React from 'react'
-import './SignUp.css'
+import styles from './SignUp.module.css';
 import axios from '../../Instances/axiosInstance.js'
 import { withRouter } from "react-router-dom";
 
@@ -16,33 +16,33 @@ class SingUp extends React.Component {
         return (
             <section>
                 <div>
-                    <h1 className="title3">Registrate</h1>
+                    <h1 className={styles.title3}>Registrate</h1>
                 </div>
-                <div className="cont">
-                    <form className="singupcentral">
-                        <label className="label">Nombre</label>
-                        <input type="text" name="firstName" className="campo1" placeholder="Nombre"
+                <div className={styles.cont}>
+                    <form className={styles.singupcentral}>
+                        <label className={styles.label}>Nombre</label>
+                        <input type="text" name="firstName" className={styles.campo1} placeholder="Nombre"
                                value={this.state.firstName} onChange={this.handleInputChange}/>
 
-                        <label className="label">Correo</label>
-                        <input type="email" name="email" className="campo1" placeholder="correo electronico"
+                        <label className={styles.label}>Correo</label>
+                        <input type="email" name="email" className={styles.campo1} placeholder="correo electronico"
                                value={this.state.email} onChange={this.handleInputChange}/>
 
                     </form>
-                    <form className="singupcentral">
-                        <label className="label1">Apellido</label>
-                        <input type="text" name="lastName" className="campo2" placeholder="Apellido"
+                    <form className={styles.singupcentral}>
+                        <label className={styles.label1}>Apellido</label>
+                        <input type="text" name="lastName" className={styles.campo2} placeholder="Apellido"
                                value={this.state.lastName} onChange={this.handleInputChange}/>
 
 
-                        <label className="label1">Contraseña</label>
-                        <input type="password" name="rawPassword" className="campo2" placeholder="Password"
+                        <label className={styles.label1}>Contraseña</label>
+                        <input type="password" name="rawPassword" className={styles.campo2} placeholder="Password"
                                value={this.state.rawPassword} onChange={this.handleInputChange}/>
 
                     </form>
                 </div>
 
-                <button className="singup" onClick={this.signUp}>Registrate</button>
+                <button className={styles.singup} onClick={this.signUp}>Registrate</button>
             </section>
         )
     }

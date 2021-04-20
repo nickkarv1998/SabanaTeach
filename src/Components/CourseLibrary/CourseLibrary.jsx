@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar'
-import './CourseLibrary.css'
+import styles from './CourseLibrary.module.css';
+
 import axios from '../../Instances/axiosInstance.js'
 
 class CourseLibrary extends Component {
@@ -27,18 +28,18 @@ class CourseLibrary extends Component {
         return <div>
             <SearchBar/>
             <div>
-                <h1 className="titulo2">Catálogo de Cursos</h1>
+                <h1 className={styles.titulo2}>Catálogo de Cursos</h1>
             </div>
 
-            <div className="curso">
+            <div className={styles.curso}>
                 {
                     this.state.availableCourses.map(course => (
-                        <details className="cursos">
+                        <details className={styles.cursos}>
                             <summary class="resume">
                                 + {course.title}
                             </summary>
 
-                            <p className="content">
+                            <p className={styles.content}>
                                 {course.description}
                                 <br/> <br/>
                                 <b>Duración:</b> {course.duration}
