@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import RightBar from './RightBar/RightBar'
 import Central from './Central'
@@ -14,19 +14,19 @@ import SingUp from './SignUp/SignUp';
 import Home from './Home/Home';
 import Homerb from './HomeRightBar/HomeRightBar';
 import Class from './Class/Class'
+import CourseContent from "./courseContent";
 
 
-
-const Content = ({ showMenu, setShowMenu }) => {
+const Content = ({showMenu, setShowMenu}) => {
     return (
 
         <div className="principal">
 
             {showMenu ? (
                 <div className="left">
-                    <Menu />
+                    <Menu/>
                 </div>
-            ): null}
+            ) : null}
             <BrowserRouter>
                 {/* <Switch>
                 <Route path="/CourseContent" exact render={() =>
@@ -52,55 +52,56 @@ const Content = ({ showMenu, setShowMenu }) => {
                 <div className="center">
                     <Route path="/CourseContent" exact render={() =>
                         <Central
-                        setShowMenu={setShowMenu} />}
+                            setShowMenu={setShowMenu}/>}
                     />
                     <Route path="/" exact render={() =>
-                        <Index 
-                        setShowMenu={setShowMenu}/>}
+                        <Index
+                            setShowMenu={setShowMenu}/>}
                     />
                     <Route path="/Login" exact render={() =>
-                        < Login 
-                        setShowMenu={setShowMenu}/>}
+                        < Login
+                            setShowMenu={setShowMenu}/>}
                     />
                     <Route path="/CourseLibrary" exact render={() =>
-                        < CourseLibrary 
-                        setShowMenu={setShowMenu}/>}
+                        < CourseLibrary
+                            setShowMenu={setShowMenu}/>}
                     />
                     <Route path="/SignUp" exact render={() =>
-                        < SingUp 
-                        setShowMenu={setShowMenu}/>}
+                        < SingUp
+                            setShowMenu={setShowMenu}/>}
                     />
                     <Route path="/Home" exact render={() =>
-                        < Home 
-                         setShowMenu={setShowMenu}
+                        < Home
+                            setShowMenu={setShowMenu}
                         />}
                     />
                     <Route path="/Class" exact render={() =>
-                        < Class 
-                         setShowMenu={setShowMenu}
+                        < Class
+                            setShowMenu={setShowMenu}
                         />}
+                    />
+                    <Route path="/CourseContent/:courseId" exact render={
+                        (routeParams) => <CourseContent courseId={routeParams.match.params.courseId}/>
+                    }
                     />
                 </div>
                 <div className="right">
-                    <Route path="/CourseContent" exact render={() =>
-                        <RightBar 
-                        />}
-                    />
+
                     <Route path="/Class" exact render={() =>
-                        <RightBar 
+                        <RightBar
                         />}
                     />
                     <Route path="/Login" exact render={() =>
-                        <LoginRightBar />}
+                        <LoginRightBar/>}
                     />
 
                     <Route path="/" exact render={() =>
-                        <IndexRightBar />}
+                        <IndexRightBar/>}
                     />
 
                     <Route path="/Home" exact render={() =>
                         < Homerb
-                        setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu}/>}
                     />
 
                 </div>

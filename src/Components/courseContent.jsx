@@ -1,26 +1,43 @@
-import React , {useEffect} from 'react'
+import React from 'react'
 import Video from './Video'
 import CourseBasicInfo from './CourseBasicInfo/CourseBasicInfo'
 import '../index.css'
+import axios from "../Instances/axiosInstance";
 
 
-const CourseContent = (props) => {
+class CourseContent extends React.Component {
+    state = {
+        course: {}
+    }
 
-    return (
-        <div className="CourseContent">
-            <div className="Title1">
-                <h1>{props.name}</h1>
+    componentDidMount() {
+        axios.get(`/courses/${this.props.courseId}`).then(res => {
+            const stateCopy = {...this.state}
+            stateCopy.course = res.data
+            this.setState(stateCopy)
+        }).catch(error => {
+            console.log(error)
+            alert(error.response.data)
+        })
+    }
+
+    render() {
+        return (
+            <div className="CourseContent">
+                <div className="Title1">
+                    <h1>{this.state.course.title}</h1>
+                </div>
+                <div className="VideoContainer">
+                    <Video url={this.state.course.introVideoUrl}/>
+                </div>
+                <CourseBasicInfo duration={this.state.course.duration} teacher={this.state.course.teacher} cert={this.state.course.isCertified ? 'Sí' : 'No'}/>
+                <div className="CourseDescription">
+                    <h2>Descripción</h2>
+                    <p>{this.state.course.description}</p>
+                </div>
             </div>
-            <div className="VideoContainer">
-                <Video/>
-            </div>
-            <CourseBasicInfo duration="2 hrs" teacher="Miguel Camacho" cert="Sí" />
-            <div className="CourseDescription">
-                <h2>Descripción</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. s cumque blanditiis, nobis sunt debitis ullam molestias ea!</p>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default CourseContent
