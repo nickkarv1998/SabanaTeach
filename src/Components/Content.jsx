@@ -6,12 +6,12 @@ import Central from './Central'
 
 import Menu from './Menu/Menu'
 import Index from './Index/Index';
-import Login from '../Screens/Login/Login';
+import Login from './Login/Login';
 import CourseLibrary from './CourseLibrary/CourseLibrary';
 import LoginRightBar from './LoginRightBar/LoginRightBar';
 import IndexRightBar from './IndexRightBar/IndexRightBar';
-import SingUp from '../Screens/SignUp/SignUp';
-import Home from '../Screens/Home/Home';
+import SingUp from './SignUp/SignUp';
+import Home from './Home/Home';
 import Homerb from './HomeRightBar/HomeRightBar';
 import Class from './Class/Class'
 

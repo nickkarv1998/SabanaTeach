@@ -3,7 +3,10 @@ import Content from './Components/Content';
 
 
 function App() {
-  const [showMenu, setShowMenu] = useState(false)
+
+  const [showMenu, setShowMenu]=useState(false)
+
+
 
   return (
     <div >
@@ -12,6 +15,7 @@ function App() {
         setShowMenu={setShowMenu}
       />
     </div>
+
   );
 }
 
