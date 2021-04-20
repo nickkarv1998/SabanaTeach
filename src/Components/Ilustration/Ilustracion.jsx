@@ -1,10 +1,11 @@
 import React from 'react'
-import './IlustrationStyle.css';
+import styles from './IlustrationStyle.module.css';
+
 
 export const Ilustracion = ({urlImg}) => {
     return (
         <div>
-            <img className="ilustracion1" src={urlImg}    alt=""/>
+            <img className={styles.ilustracion1} src={urlImg}    alt=""/>
         </div>
     )
 }

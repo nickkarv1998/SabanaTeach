@@ -57,17 +57,6 @@ code {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.menu {
-    background: #A986E2;
-    width: 92%;
-    height: 95%;
-    text-align: center;
-    display: table-column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
 
 .imag {
     position: relative;

@@ -1,6 +1,7 @@
 import React  , {useEffect}  from 'react'
-import SearchBar from './SearchBar/SearchBar'
-import CourseContent from './courseContent'
+import SearchBar from '../SearchBar/SearchBar'
+import CourseContent from '../CourseContent/courseContent'
+import '../../index.css'
 
 
 const Central = ({setShowMenu}) => {

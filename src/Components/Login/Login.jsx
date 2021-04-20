@@ -1,5 +1,5 @@
 import React from 'react'
-import './Login.css'
+import styles from './Login.module.css';
 import Logo from './login.svg';
 import { withRouter } from "react-router-dom";
 import axios from '../../Instances/axiosInstance.js'
@@ -14,14 +14,14 @@ class Login extends React.Component {
         return (
             <div>
                 <h1>SabanaTeach</h1>
-                <img className="image" src={Logo} alt=""/>
-                <form className="login">
-                    <input type="text" name="email" className="campo" placeholder="Email"
+                <img className={styles.image} src={Logo} alt=""/>
+                <form className={styles.login}>
+                    <input type="text" name="email" className={styles.campo} placeholder="Email"
                            value={this.state.email} onChange={this.handleInputChange}/>
-                    <input type="password" name="rawPassword" className="campo" placeholder="Constraseña"
+                    <input type="password" name="rawPassword" className={styles.campo} placeholder="Constraseña"
                            value={this.state.rawPassword} onChange={this.handleInputChange}/>
                 </form>
-                <button className="button" onClick={this.signIn}>Iniciar Sesión</button>
+                <button className={styles.button} onClick={this.signIn}>Iniciar Sesión</button>
             </div>
         )
     }

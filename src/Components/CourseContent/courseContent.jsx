@@ -1,8 +1,8 @@
 import React from 'react'
-import Video from './Video'
-import CourseBasicInfo from './CourseBasicInfo/CourseBasicInfo'
-import '../index.css'
-import axios from "../Instances/axiosInstance";
+import Video from '../Video/Video'
+import CourseBasicInfo from './../CourseBasicInfo/CourseBasicInfo'
+import '../../index.css'
+import axios from "../../Instances/axiosInstance"
 
 
 class CourseContent extends React.Component {

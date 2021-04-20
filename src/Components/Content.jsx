@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 import RightBar from './RightBar/RightBar'
-import Central from './Central'
+import Central from './Central/Central'
 
 import Menu from './Menu/Menu'
 import Index from './Index/Index';
@@ -14,7 +14,7 @@ import SingUp from './SignUp/SignUp';
 import Home from './Home/Home';
 import Homerb from './HomeRightBar/HomeRightBar';
 import Class from './Class/Class'
-import CourseContent from "./courseContent";
+import CourseContent from "./CourseContent/courseContent";
 
 
 const Content = ({showMenu, setShowMenu}) => {
@@ -28,27 +28,6 @@ const Content = ({showMenu, setShowMenu}) => {
                 </div>
             ) : null}
             <BrowserRouter>
-                {/* <Switch>
-                <Route path="/CourseContent" exact render={() =>
-                    <div className="left">
-
-                        <Menu />
-                    </div>}
-                />
-                <Route path="/CourseLibrary" exact render={() =>
-                    <div className="left">
-
-                        <Menu />
-                    </div>}
-                />
-                  <Route path="/Home" exact render={() =>
-                    <div className="left">
-
-                        <Menu />
-                    </div>}
-                />
-
-                </Switch> */}
                 <div className="center">
                     <Route path="/CourseContent" exact render={() =>
                         <Central
@@ -103,7 +82,7 @@ const Content = ({showMenu, setShowMenu}) => {
                         < Homerb
                             setShowMenu={setShowMenu}/>}
                     />
-
+                     
                 </div>
 
 
