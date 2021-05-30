@@ -13,7 +13,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <h1>SabanaTeach</h1>
+                <h1 className={styles.principal}>SabanaTeach</h1>
                 <img className={styles.image} src={Logo} alt=""/>
                 <form className={styles.login}>
                     <input type="text" name="email" className={styles.campo} placeholder="Email"

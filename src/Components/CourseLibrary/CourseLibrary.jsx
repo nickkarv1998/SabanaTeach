@@ -35,7 +35,7 @@ class CourseLibrary extends Component {
                 {
                     this.state.availableCourses.map(course => (
                         <details className={styles.cursos}>
-                            <summary class="resume">
+                            <summary className={styles.resume}>
                                 + {course.title}
                             </summary>
 

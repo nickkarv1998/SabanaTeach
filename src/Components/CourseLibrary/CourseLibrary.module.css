@@ -30,18 +30,16 @@ details[open] > summary {
     background-color: #ccf;
   } 
 
-
-
-
 .content{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.644);
     padding: 10px;
+    border-radius: 20px;
+   
 }
 
 .curso{
-    position: relative;
     top: 100px;
-    overflow: auto;
+    overflow:scroll;
     height: 410px;
     border-color: rgb(71, 11, 71);
 }
@@ -54,8 +52,8 @@ details[open] > summary {
     width:10px;
 }
 
-.curso::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
-    display: none;
+.curso::-webkit-scrollbar-button:increment,.curso::-webkit-scrollbar-button {
+    display:none;
 } 
 
 .curso::-webkit-scrollbar:horizontal {
@@ -73,9 +71,12 @@ details[open] > summary {
 }
 
 .titulo2{
+   
     font-size: 30px;
-    left: 200px;
-    top: 120px;
+    left: -250px;
+    top: 0px;
     color: black;
     font-weight: 500;
 }
+
+
