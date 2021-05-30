@@ -8,7 +8,7 @@ const Index = (props) => {
     return (
         <div>
             <div className={styles.title}>
-                <h1>Inicia Sesión en SabanaTeach o comienza a ser parte de Nuestra comunidad</h1>
+                <h1 className={styles.titleIndex}>Inicia Sesión en SabanaTeach o comienza a ser parte de Nuestra comunidad</h1>
                 <Link to={"/Login"}>
                 <button className={styles.button1} >Iniciar sesión</button>
                 </Link>

@@ -1,9 +1,9 @@
 .ilustracion{
     width: 400px;
-    height: 400px;
-    position: absolute;
-    right: 450px;
-    top:240px;
+    height: 390px;
+    position: relative;
+    left: 50px;
+    top:210px;
 }
 
 .title{
@@ -13,10 +13,11 @@
     left: -180px;
 }
 
-.title h1{
+.titleIndex{
     text-align: left;
     color: black;
     font-size: 30px;
+    left: 350px;
 }
 
 .button1{
@@ -30,10 +31,67 @@
     border-color: #32C1E0;
     color: white;
     font-weight: 700;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:sans-serif;
 
 }
 
 .button:hover{
     background: #32c0e0a1;
 }
+
+@media (max-width: 900px) {
+    .ilustracion {
+        width: 100px;
+        height: 90px;
+        left: 0px;
+    }
+    .titleIndex{
+        top: -70px;
+        font-size: 15px;
+        left: 250px;
+        width: 100%;
+    }
+    .button1{
+        top: 400px;
+        font-size: 10px;
+        left: 350px;
+    }
+  }
+@media (max-width: 900px) {
+    .ilustracion {
+        width: 200px;
+        height: 190px;
+    }
+    .titleIndex{
+        font-size: 15px;
+    }
+  }
+
+
+  @media (max-width: 1030px) {
+    .ilustracion {
+        width: 300px;
+        height: 290px;
+    }
+    .titleIndex{
+        font-size: 25px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .ilustracion {
+        top: 300px;
+        width: 600px;
+        height: 500px;
+    }
+    .titleIndex{
+        font-size: 40px;
+        left: 400px;
+    }
+    .button1{
+        top: 500px;
+        font-size: 18px;
+        left: 450px;
+
+    }
+  }

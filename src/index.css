@@ -111,3 +111,20 @@ position: relative;
 left: -5px;
 
 }
+
+@media (max-width: 1200px) {
+    .videoInit {
+        width: 400px;
+        height: 200px;
+    }
+
+
+}
+@media (max-width: 1000px) {
+    .videoInit {
+        width: 300px;
+        height: 200px;
+    }
+
+
+}
