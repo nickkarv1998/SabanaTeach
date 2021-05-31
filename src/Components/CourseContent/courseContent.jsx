@@ -3,7 +3,8 @@ import Video from '../Video/Video'
 import CourseBasicInfo from './../CourseBasicInfo/CourseBasicInfo'
 import '../../index.css'
 import axios from "../../Instances/axiosInstance"
-
+import { connect } from "react-redux";
+import {withRouter, Redirect} from 'react-router-dom';
 
 class CourseContent extends React.Component {
     state = {
@@ -22,6 +23,9 @@ class CourseContent extends React.Component {
     }
 
     render() {
+        if (!this.props.logged) {
+            return <Redirect to='/login' />
+        }
         return (
             <div className="CourseContent">
                 <div className="Title1">
@@ -40,4 +44,11 @@ class CourseContent extends React.Component {
     }
 }
 
-export default CourseContent
+const mapStateToProps = (state) => {
+    return {
+        logged: state.sesionStore.IsUserLoggedIn,
+        firstname: state.sesionStore.name,
+    };
+};
+
+export default connect(mapStateToProps)(withRouter(CourseContent))

@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import RightBar from './RightBar/RightBar'
 import Central from './Central/Central'
@@ -17,37 +17,40 @@ import Class from './Class/Class'
 import CourseContent from "./CourseContent/courseContent";
 
 
-const Content = ({showMenu, setShowMenu}) => {
+const Content = ({ showMenu, setShowMenu }) => {
     return (
 
         <div className="principal">
 
-            {showMenu ? (
-                <div className="left">
-                    <Menu/>
-                </div>
+            {showMenu ? (null
+                // <div className="left">
+                //     <Menu />
+                // </div>
             ) : null}
             <BrowserRouter>
+                <div className="left">
+                    <Menu />
+                </div>
                 <div className="center">
                     <Route path="/CourseContent" exact render={() =>
                         <Central
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/" exact render={() =>
                         <Index
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/Login" exact render={() =>
                         < Login
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/CourseLibrary" exact render={() =>
                         < CourseLibrary
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/SignUp" exact render={() =>
                         < SingUp
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/Home" exact render={() =>
                         < Home
@@ -60,7 +63,7 @@ const Content = ({showMenu, setShowMenu}) => {
                         />}
                     />
                     <Route path="/CourseContent/:courseId" exact render={
-                        (routeParams) => <CourseContent courseId={routeParams.match.params.courseId}/>
+                        (routeParams) => <CourseContent courseId={routeParams.match.params.courseId} />
                     }
                     />
                 </div>
@@ -71,21 +74,19 @@ const Content = ({showMenu, setShowMenu}) => {
                         />}
                     />
                     <Route path="/Login" exact render={() =>
-                        <LoginRightBar/>}
+                        <LoginRightBar />}
                     />
 
                     <Route path="/" exact render={() =>
-                        <IndexRightBar/>}
+                        <IndexRightBar />}
                     />
 
                     <Route path="/Home" exact render={() =>
                         < Homerb
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
-                     
+
                 </div>
-
-
             </BrowserRouter>
         </div>
     )
