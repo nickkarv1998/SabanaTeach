@@ -39,7 +39,7 @@ class Login extends Component {
             rawPassword: this.state.rawPassword
         }).then(res => {
             localStorage.setItem("userId", res.data.id)
-            alert("Ingreso exitoso")
+     //       alert("Ingreso exitoso")
             this.props.onLogin(res.data)
             this.props.history.push('/Home')
         }).catch(_ => {
