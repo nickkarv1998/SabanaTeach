@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import jsPDF from "jspdf"
 import html2canvas from "html2canvas"
 import domtoimage from 'dom-to-image';
@@ -18,6 +18,7 @@ import Class from './Class/Class'
 import CourseContent from "./CourseContent/courseContent";
 import PDF from './PDF/PDF.jsx';
 import SectionClass from './SectionClass/SectionClass';
+import NotFound from './404/NotFound';
 
 
 const Content = () => {
@@ -48,6 +49,7 @@ const Content = () => {
                     <Menu />
                 </div>
                 <div className="center">
+                    <Switch>
                     <Route path="/CourseContent" exact render={() =>
                         <Central
                             setShowMenu={setShowMenu} />}
@@ -90,6 +92,9 @@ const Content = () => {
 
                         />}
                     />
+
+                    <Route component={NotFound} />
+                    </Switch>
                 </div>
                 <div className="right">
 
