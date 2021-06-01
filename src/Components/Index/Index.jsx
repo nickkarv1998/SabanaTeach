@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import logo from './learning.svg'
 import styles from './Index.module.css';
 import { Link } from 'react-router-dom';
 
 
-const Index = (props) => {
+const Index = ({ setShowMenu }) => {
+        
+    useEffect(() => {
+        setShowMenu(false)
+    }, [])
+
     return (
         <div>
             <div className={styles.title}>

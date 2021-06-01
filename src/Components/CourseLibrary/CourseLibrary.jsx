@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar'
 import styles from './CourseLibrary.module.css';
-
 import axios from '../../Instances/axiosInstance.js'
 
 class CourseLibrary extends Component {

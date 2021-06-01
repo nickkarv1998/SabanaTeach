@@ -38,7 +38,6 @@ class Login extends React.Component {
             rawPassword: this.state.rawPassword
         }).then(res => {
             localStorage.setItem("userId", res.data.id)
-            alert("Ingreso exitoso")
             this.props.history.push('/Home')
         }).catch(_ => {
             alert("Información incorrecta")
