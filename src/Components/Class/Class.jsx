@@ -22,6 +22,12 @@ class Class extends Component {
             console.log(error)
             alert(error.response.data)
         })
+
+        axios.post(`/courses/progress/${this.props.lessonId}/${userId}`).then(res => {
+            console.log('okay')
+        }).catch(error => {
+            console.log('no!')
+        })
     }
 
     render() {
