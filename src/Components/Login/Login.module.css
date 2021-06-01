@@ -6,7 +6,7 @@
     font-size: 70px;
     z-index: 100;
     color:rgb(87, 80, 80) ;
-    bottom: 0px;
+    bottom: -50px;
     top: 50px;
 }
 h1{
@@ -41,7 +41,7 @@ h1{
     
 
 }
-.campo{
+.campoe{
     top: -500px;
     width: 45%;
     height: 35px;
@@ -49,9 +49,9 @@ h1{
     margin: 50px;
     background-color: rgba(218, 215, 218, 0.719);
     border-color: red;
+    border-width: 0.5px;
     border-radius: 10px;
     font-size: 15px;
-    border: none;
     text-indent: 10px;
     color: rgb(110, 109, 109);
     
@@ -60,13 +60,15 @@ h1{
 }
 
 .error{
-    color: black;
+    color: rgb(209, 27, 27);
+    left: -140px;
+    top:-450px;
+    position: relative;
 }
 .image{
    
     left: 0px;;
     position: relative;
-    overflow: hidden;
     width: 50%;
     opacity: 20%;
 }

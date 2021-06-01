@@ -37,7 +37,7 @@ class Home extends Component {
             <div >
                 <div>
                     <SearchBar />
-                    <h2 className={styles.title4}>Bienvenido de vuelta {this.props.firstname}</h2><br></br>
+                   <div> <h2 className={styles.titleWelcome}>Bienvenido de vuelta <h2 className={styles.name}>{this.props.firstname}</h2> </h2></div>
                     <h2 className={styles.title4}>Mis Cursos</h2>
 
                     <ul className={styles.hs}>
@@ -78,6 +78,7 @@ const mapStateToProps = (state) => {
     return {
         logged: state.sesionStore.IsUserLoggedIn,
         firstname: state.sesionStore.name,
+        
     };
 };
 

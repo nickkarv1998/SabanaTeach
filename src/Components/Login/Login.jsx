@@ -21,10 +21,10 @@ class Login extends Component {
                     <h1 className={styles.principal}>SabanaTeach</h1>
                     <img className={styles.image} src={Logo} alt="" />
                     <form className={styles.login}>
-                        <p className="error"> Datos no validos!!</p>
-                        <input type="text" name="email" className={styles.campo} placeholder="Email"
+                        <p className={styles.error}> Datos no validos!!</p>
+                        <input type="text" name="email" className={styles.campoe} placeholder="Email"
                             value={this.state.email} onChange={this.handleInputChange} />
-                        <input type="password" name="rawPassword" className={styles.campo} placeholder="Constraseña"
+                        <input type="password" name="rawPassword" className={styles.campoe} placeholder="Constraseña"
                             value={this.state.rawPassword} onChange={this.handleInputChange} />
 
                     </form>
@@ -66,7 +66,7 @@ class Login extends Component {
             this.props.onLogin(res.data)
             this.props.history.push('/Home')
         }).catch(_ => {
-            alert("Información incorrecta")
+           // alert("Información incorrecta")
             this.props.onError()
 
         })
