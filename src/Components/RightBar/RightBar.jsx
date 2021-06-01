@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import { Ilustracion } from '../Ilustration/Ilustracion'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom';
+import {Ilustracion} from '../Ilustration/Ilustracion'
 import SectionClass from '../SectionClass/SectionClass'
 import styles from './RightBarStyles.module.css';
 import axios from '../../Instances/axiosInstance.js';
@@ -8,49 +8,43 @@ import axios from '../../Instances/axiosInstance.js';
 class RightBar extends Component {
 
     state = {
-        course: {}
+        courseEnrollment: null
     }
 
     componentDidMount() {
-        axios.get(`/courses/${this.props.courseId}`).then(res => {
+        const userId = localStorage.getItem("userId")
+        axios.get(`/courses/${this.props.courseId}/progress/${userId}`).then(res => {
             const stateCopy = {...this.state}
-            stateCopy.course = res.data
+            stateCopy.courseEnrollment = res.data
             this.setState(stateCopy)
         }).catch(error => {
             console.log(error)
+            alert(error.response.data)
         })
     }
 
     render() {
         return (
             <div className={styles.RightBarContent}>
-                <div >
+                <div>
                     <Ilustracion
                         urlImg='https://blush.design/api/download?shareUri=cOP92rrhr&c=skin_0.1%7E9f91ca-0.4%7E604891-0.5%7E9f91ca&w=800&h=800&fm=png'
                     />
                 </div>
                 <div className={styles['RightBarContent--title']}>
-                    <h1 className={styles['RightBarContent--h1']}>{this.state.course.title}</h1>
+                    <h1 className={styles['RightBarContent--h1']}>{!!this.state.courseEnrollment ? this.state.courseEnrollment.course.title : 'cargando...'}</h1>
                 </div>
                 <div className={styles.RightBarContent1}>
-                    <Link to={"/CourseContent"}>
-                        <SectionClass class="selected" name="Resumen" />
-                    </Link>
-                    <Link to={"/Class"}>
-                        <SectionClass name="Clase 1" />
-                    </Link>
-                    <Link to={"/Class"}>
-                        <SectionClass name="Clase 2" />
-                    </Link>
-                    <SectionClass name="Evaluación 1" link="#test1" />
-                    <Link to={"/Class"}>
-                        <SectionClass name="Clase 3" />
-                    </Link>
-                    <Link to={"/Class"}>
-                        <SectionClass name="Clase 4" />
-                    </Link>
-                    <SectionClass name="Evaluación 2" link="#test2" />
-                    <SectionClass name="Final" link="#final" />
+                    {
+                        !!this.state.courseEnrollment ?
+                            this.state.courseEnrollment.progresses.map((progress) => {
+                                return <Link to={`/Class/${progress.lesson.id}`}>
+                                    <SectionClass class="selected" name={progress.lesson.title}/>
+                                </Link>
+                            })
+                            :
+                            <p>Cargando...</p>
+                    }
                 </div>
             </div>
         )

@@ -22,7 +22,6 @@ class CourseContent extends React.Component {
             stateCopy.course = res.data.course
             stateCopy.courseEnrollment = res.data
             this.setState(stateCopy)
-            console.log(this.state.course)
         }).catch(error => {
             console.log(error)
             alert(error.response.data)

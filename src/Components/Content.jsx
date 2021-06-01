@@ -75,9 +75,10 @@ const Content = () => {
                             setShowMenu={setShowMenu}
                         />}
                     />
-                    <Route path="/Class" exact render={() =>
+                    <Route path="/Class/:lessonId" exact render={(routeParams) =>
                         < Class
                             setShowMenu={setShowMenu}
+                            lessonId={routeParams.match.params.lessonId}
                         />}
                     />
                     <Route path="/CourseContent/:courseId" exact render={
