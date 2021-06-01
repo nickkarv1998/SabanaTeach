@@ -37,32 +37,35 @@ const Content = () => {
 
         <div className="principal">
 
-            {showMenu ? (
-                <div className="left">
-                    <Menu/>
-                </div>
+            {showMenu ? (null
+                // <div className="left">
+                //     <Menu />
+                // </div>
             ) : null}
             <BrowserRouter>
+                <div className="left">
+                    <Menu />
+                </div>
                 <div className="center">
                     <Route path="/CourseContent" exact render={() =>
                         <Central
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/" exact render={() =>
                         <Index
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/Login" exact render={() =>
                         < Login
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/CourseLibrary" exact render={() =>
                         < CourseLibrary
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/SignUp" exact render={() =>
                         < SingUp
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
                     <Route path="/Home" exact render={() =>
                         < Home
@@ -75,7 +78,7 @@ const Content = () => {
                         />}
                     />
                     <Route path="/CourseContent/:courseId" exact render={
-                        (routeParams) => <CourseContent courseId={routeParams.match.params.courseId}/>
+                        (routeParams) => <CourseContent courseId={routeParams.match.params.courseId} />
                     }
                     />
                      <Route path="/pdf/:courseId" exact render={(routeParams) =>
@@ -94,24 +97,23 @@ const Content = () => {
                         />}
                     />
                     <Route path="/Login" exact render={() =>
-                        <LoginRightBar/>}
+                        <LoginRightBar />}
                     />
 
                     <Route path="/" exact render={() =>
-                        <IndexRightBar/>}
+                        <IndexRightBar />}
                     />
 
                     <Route path="/Home" exact render={() =>
                         < Homerb
-                            setShowMenu={setShowMenu}/>}
+                            setShowMenu={setShowMenu} />}
                     />
 
 
 
                      
+
                 </div>
-
-
             </BrowserRouter>
         </div>
     )

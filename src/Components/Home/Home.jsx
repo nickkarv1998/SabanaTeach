@@ -1,10 +1,12 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import CourseStatusCard from '../CourseStatusCard/courseStatusCard.jsx'
 import styles from './Home.module.css';
 import News from './NW.jpg'
 import News2 from './certificate.jpg'
 import axios from '../../Instances/axiosInstance.js'
+import { connect } from "react-redux";
+import { Redirect, withRouter } from "react-router-dom";
 
 class Home extends Component {
 
@@ -21,23 +23,26 @@ class Home extends Component {
         const userId = localStorage.getItem("userId")
         axios.get(`/courses/user/${userId}`)
             .then(response => {
-                const stateCopy = {...this.state}
+                const stateCopy = { ...this.state }
                 stateCopy.courses = response.data;
                 this.setState(stateCopy)
             })
     }
 
     render() {
+        if(!this.props.logged){
+            return <Redirect to='/login'/>
+        }
         return (
             <div >
                 <div>
                     <SearchBar />
-
+                    <h2 className={styles.title4}>Bienvenido de vuelta {this.props.firstname}</h2><br></br>
                     <h2 className={styles.title4}>Mis Cursos</h2>
 
                     <ul className={styles.hs}>
                         {
-                            this.state.courses.map(course => <CourseStatusCard course={course}/>)
+                            this.state.courses.map(course => <CourseStatusCard course={course} />)
                         }
                     </ul>
                 </div>
@@ -63,11 +68,17 @@ class Home extends Component {
                     </div>
 
                 </div>
-
             </div>
         )
     }
 
 }
 
-export default Home
+const mapStateToProps = (state) => {
+    return {
+        logged: state.sesionStore.IsUserLoggedIn,
+        firstname: state.sesionStore.name,
+    };
+};
+
+export default connect(mapStateToProps)(withRouter(Home))

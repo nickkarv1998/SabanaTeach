@@ -2,7 +2,9 @@ import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar'
 import styles from './CourseLibrary.module.css';
+import { Redirect } from "react-router-dom";
 import axios from '../../Instances/axiosInstance.js'
+import { connect } from "react-redux";
 
 class CourseLibrary extends Component {
     setShowMenu = this.props.setShowMenu
@@ -24,6 +26,9 @@ class CourseLibrary extends Component {
     }
 
     render() {
+        if(!this.props.logged){
+            return <Redirect to='/login'/>
+        }
         return <div>
             <SearchBar/>
             <div>
@@ -77,4 +82,11 @@ class CourseLibrary extends Component {
 }
 
 
-export default withRouter(CourseLibrary)
+const mapStateToProps = (state) => {
+    return {
+        logged: state.sesionStore.IsUserLoggedIn,
+        firstname: state.sesionStore.name,
+    };
+};
+
+export default connect(mapStateToProps)(withRouter(CourseLibrary))
