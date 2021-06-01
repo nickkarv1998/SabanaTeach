@@ -30,7 +30,7 @@ const Content = () => {
             domtoimage.toPng(input)
                 .then(imgData => {
                     pdf.addImage(imgData, 'PNG', -10, 0);
-                    pdf.save('download.pdf');
+                    pdf.save('MiCertificado.pdf');
                 });
         }
     }

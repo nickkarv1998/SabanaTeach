@@ -22,7 +22,7 @@
     top: 20%;
     color: rgb(255, 255, 255);
     text-decoration-line: none;
-    text-decoration: wavy;
+    text-decoration: underline;
 }
 
 .menu h3:hover {
@@ -31,6 +31,8 @@
     border-radius: 10px 0 0 10px;
     color: #32C1E0;
     text-decoration: none;
+    text-decoration-line: none;
+
 
 }
 
