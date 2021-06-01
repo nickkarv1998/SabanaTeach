@@ -41,6 +41,27 @@ h1{
     
 
 }
+.campo{
+    top: -500px;
+    width: 45%;
+    height: 35px;
+    position: relative;
+    margin: 50px;
+    background-color: rgba(218, 215, 218, 0.719);
+    border-color: red;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    text-indent: 10px;
+    color: rgb(110, 109, 109);
+    
+    
+
+}
+
+.error{
+    color: black;
+}
 .image{
    
     left: 0px;;

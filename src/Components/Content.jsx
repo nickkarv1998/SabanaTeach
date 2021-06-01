@@ -17,10 +17,11 @@ import Homerb from './HomeRightBar/HomeRightBar';
 import Class from './Class/Class'
 import CourseContent from "./CourseContent/courseContent";
 import PDF from './PDF/PDF.jsx';
+import SectionClass from './SectionClass/SectionClass';
 
 
 const Content = () => {
-    const [showMenu, setShowMenu] = useState(true);
+   const [showMenu, setShowMenu] = useState(true);
 
    const printDocument =()=> {
         const input = document.getElementById('Certificado');
@@ -108,6 +109,9 @@ const Content = () => {
                         < Homerb
                             setShowMenu={setShowMenu} />}
                     />
+                     <Route path="/CourseContent"  render={() =>
+                       <RightBar />                }
+                    />                   
 
 
 

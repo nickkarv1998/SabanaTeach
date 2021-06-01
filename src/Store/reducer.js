@@ -5,6 +5,7 @@ const initialState = {
   name: "",
   surname: "",
   email: "",
+  error:false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,7 @@ const reducer = (state = initialState, action) => {
         name: action.payload.name,
         surname: action.payload.surname,
         email: action.payload.email,
+        error:false,
       };
     case actionTypes.LOGOUT:
       return {
@@ -25,6 +27,11 @@ const reducer = (state = initialState, action) => {
         surname: "",
         email: "",
       };
+      case actionTypes.ERROR:
+        return{
+          ...state,
+          error: true
+        }
     default:
       return state;
   }
