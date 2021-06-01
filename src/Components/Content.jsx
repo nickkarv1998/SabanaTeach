@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import jsPDF from "jspdf"
 import html2canvas from "html2canvas"
 import domtoimage from 'dom-to-image';
@@ -21,17 +21,17 @@ import SectionClass from './SectionClass/SectionClass';
 
 
 const Content = () => {
-   const [showMenu, setShowMenu] = useState(true);
+    const [showMenu, setShowMenu] = useState(true);
 
-   const printDocument =()=> {
+    const printDocument = () => {
         const input = document.getElementById('Certificado');
         const pdf = new jsPDF("l", "mm", "a5");
         if (pdf) {
-          domtoimage.toPng(input)
-            .then(imgData => {
-              pdf.addImage(imgData,'PNG',-10, 0);
-              pdf.save('download.pdf');
-            });
+            domtoimage.toPng(input)
+                .then(imgData => {
+                    pdf.addImage(imgData, 'PNG', -10, 0);
+                    pdf.save('download.pdf');
+                });
         }
     }
     return (
@@ -82,14 +82,14 @@ const Content = () => {
                         (routeParams) => <CourseContent courseId={routeParams.match.params.courseId} />
                     }
                     />
-                     <Route path="/pdf/:courseId" exact render={(routeParams) =>
+                    <Route path="/pdf/:courseId" exact render={(routeParams) =>
                         < PDF
                             courseId={routeParams.match.params.courseId}
                             setShowMenu={setShowMenu}
                             printDocument={printDocument}
-                            
+
                         />}
-                    />                   
+                    />
                 </div>
                 <div className="right">
 
@@ -109,14 +109,11 @@ const Content = () => {
                         < Homerb
                             setShowMenu={setShowMenu} />}
                     />
-                     <Route path="/CourseContent"  render={() =>
-                       <RightBar />                }
-                    />                   
-
-
-
-                     
-
+                    <Route path="/CourseContent/:courseId" exact render={(routeParams) =>
+                        <RightBar
+                            courseId={routeParams.match.params.courseId}
+                        />}
+                    />
                 </div>
             </BrowserRouter>
         </div>

@@ -27,17 +27,11 @@ class PDF extends Component {
                 <h4>Has completado tu curso de {this.state.course.title} </h4>
             <img className={styles.image} src={Logo} alt="foto"/>
             <br />
-           
-        
             </div>
-            
             <button className={styles.button} onClick={this.props.printDocument}>Descargar PDF</button>
         </div>
     )
     }
-
-
-    
 }
 
 export default PDF
