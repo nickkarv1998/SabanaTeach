@@ -11,14 +11,18 @@ import {withRouter, Redirect} from 'react-router-dom';
 
 class CourseContent extends React.Component {
     state = {
-        course: {}
+        course: {},
+        courseEnrollment: {}
     }
 
     componentDidMount() {
-        axios.get(`/courses/${this.props.courseId}`).then(res => {
-            const stateCopy = { ...this.state }
-            stateCopy.course = res.data
+        const userId = localStorage.getItem("userId")
+        axios.get(`/courses/${this.props.courseId}/progress/${userId}`).then(res => {
+            const stateCopy = {...this.state}
+            stateCopy.course = res.data.course
+            stateCopy.courseEnrollment = res.data
             this.setState(stateCopy)
+            console.log(this.state.course)
         }).catch(error => {
             console.log(error)
             alert(error.response.data)
@@ -43,9 +47,14 @@ class CourseContent extends React.Component {
                     <p>{this.state.course.description}</p>
                 </div>
                 <div >
-                     <Link to={`/pdf/${this.state.course.id}`}>
-                        <button className={styles.button}>Ver Certificado</button>
-                    </Link>
+                    {
+                        this.state.courseEnrollment.isCompleted ?
+                            <Link to={`/pdf/${this.state.course.id}`}>
+                                <button className={styles.button}>Ver Certificado</button>
+                            </Link>
+                            :
+                            null
+                    }
                 </div>
             </div>
         )
